@@ -7,6 +7,7 @@ Ahmed Raza (241923)
 This is a Windows Forms (WinForms) based Hospital Management System developed using C# and SQL Server. The system is designed to handle essential hospital operations such as managing doctors, patients, appointments, admissions, treatments, billing, and more.
 
 📚 Features
+
 👨‍⚕️ Doctor Management (with specialization & department)
 
 🧑‍🤝‍🧑 Patient Registration
@@ -81,12 +82,6 @@ Run the project.
 Use the main dashboard to navigate to different modules.
 
 Add doctors, patients, and set up appointments.
-
-Admit and discharge patients with tracking.
-
-Assign treatments and prescribe medicines.
-
-Generate bills and record payments.
 
 View detailed reports via “Load Records” module.
 
