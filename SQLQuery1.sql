@@ -157,7 +157,38 @@ ADD
 
 
 
+	-- 1. CREATE (Insert)
+-- Add a new ward
+INSERT INTO Ward (Type, Capacity)
+VALUES ('General Ward', 30);
 
+INSERT INTO Ward (Type, Capacity)
+VALUES ('ICU', 10);
+
+INSERT INTO Ward (Type, Capacity)
+VALUES ('Pediatric Ward', 20);
+
+-- 2. READ (Select)
+-- a) Get all wards
+SELECT WardID, Type, Capacity
+FROM Ward;
+
+-- b) Get a specific ward by ID
+SELECT WardID, Type, Capacity
+FROM Ward
+WHERE WardID = 2; -- ICU ward
+
+-- 3. UPDATE
+-- Update capacity of a ward
+UPDATE Ward
+SET Type = 'Intensive Care Unit',
+Capacity = 12
+WHERE WardID = 2;
+
+-- 4. DELETE
+-- Delete a ward by ID
+DELETE FROM Ward
+WHERE WardID = 3; -- Pediatric Ward
 	-- ============================
 -- PATIENTS
 -- ============================
@@ -243,7 +274,7 @@ WHERE AdmissionID = 1;
 -- ============================
 -- CREATE
 INSERT INTO Treatment (AdmissionID, AppointmentID, Description, Date, DoctorID)
-VALUES (1, 2, 'IV fluids and monitoring', '2024-06-06', 1);
+VALUES (2, 1, 'IV fluids and monitoring', '2024-06-06', 1);
 
 -- READ
 SELECT * FROM Treatment;
@@ -336,3 +367,5 @@ WHERE PaymentID = 1;
 -- DELETE
 DELETE FROM Payment
 WHERE PaymentID = 1;
+
+
